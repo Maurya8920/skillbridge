@@ -1,0 +1,257 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #7c5cff;
+  --color-primary-hover: #6a4ce6;
+  --color-dark-base: #0b0a1f;
+  --color-dark-panel: #12102b;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #c9c6e0;
+}
+
+:root {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0b0a1f;
+  background-image:
+    radial-gradient(circle at 12% 15%, rgba(43, 31, 107, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 88% 28%, rgba(26, 22, 80, 0.9) 0%, transparent 55%);
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography tokens */
+.headline-hero {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 56px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .headline-hero {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline-hero {
+    font-size: 30px;
+    line-height: 1.22;
+  }
+}
+
+/* Orchid Dark Design System Components */
+@layer components {
+  /* Pill Buttons - exactly 48px height, 0 28px padding, 16px medium */
+  .btn-pill-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 9999px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #7c5cff;
+    box-shadow: 0 8px 30px rgba(124, 92, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 150ms ease, box-shadow 150ms ease, opacity 150ms ease;
+  }
+  .btn-pill-primary:hover:not(:disabled) {
+    background-color: #6a4ce6;
+    box-shadow: 0 10px 34px rgba(124, 92, 255, 0.45);
+  }
+  .btn-pill-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-pill-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 9999px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0b0a1f;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 150ms ease, opacity 150ms ease;
+  }
+  .btn-pill-secondary:hover:not(:disabled) {
+    background-color: #f0f0f5;
+  }
+  .btn-pill-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-pill-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 24px;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 150ms ease, border-color 150ms ease;
+  }
+  .btn-pill-ghost:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .btn-pill-ghost:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* Compact button variant for tables/actions */
+  .btn-pill-sm {
+    height: 38px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .btn-pill-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 9999px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #e11d48;
+    box-shadow: 0 4px 16px rgba(225, 29, 72, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+  }
+  .btn-pill-danger:hover:not(:disabled) {
+    background-color: #be123c;
+  }
+
+  /* Standard Orchid Dark Card */
+  .card-orchid {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  /* Dark Inner Panel */
+  .panel-dark {
+    background-color: #12102b;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 16px;
+  }
+
+  /* Input fields */
+  .input-orchid {
+    width: 100%;
+    height: 46px;
+    background-color: #12102b;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+  .input-orchid::placeholder {
+    color: #7e7b9a;
+  }
+  .input-orchid:focus {
+    border-color: #7c5cff;
+    box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.2);
+  }
+
+  .textarea-orchid {
+    width: 100%;
+    background-color: #12102b;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+  .textarea-orchid::placeholder {
+    color: #7e7b9a;
+  }
+  .textarea-orchid:focus {
+    border-color: #7c5cff;
+    box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.2);
+  }
+
+  .label-orchid {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c9c6e0;
+  }
+
+  /* Soft pill badges */
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 9999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: #c9c6e0;
+  }
+}
+
+/* Clean Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0a1f;
+}
+::-webkit-scrollbar-thumb {
+  background: #252055;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #373078;
+}

@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Builds
+client/dist/
+dist/
+
+# Uploads (keep directory placeholder)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# System & logs
+.DS_Store
+*.log
+npm-debug.log*
