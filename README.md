@@ -5,6 +5,7 @@ A MERN-stack platform where **students** find and apply to internships, **recrui
 ## 🚀 Live Demo
 
 **Website:** https://skillbridge-one-sigma.vercel.app
+
 **API:** https://skillbridge-api-x78g.onrender.com/api/health
 
 > First load may take ~40 s while the free server wakes up.
