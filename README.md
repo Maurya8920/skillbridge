@@ -2,6 +2,19 @@
 
 A MERN-stack platform where **students** find and apply to internships, **recruiters** post jobs and manage applicants, and an **admin** oversees the platform.
 
+## 🚀 Live Demo
+
+**Website:** https://skillbridge-one-sigma.vercel.app
+**API:** https://skillbridge-api-x78g.onrender.com/api/health
+
+> First load may take ~40 s while the free server wakes up.
+
+| Role | Email | Password |
+|------|-------|----------|
+| Student | naman@student.dev | password123 |
+| Recruiter | riya@techdevrit.com | password123 |
+| Admin | admin@skillbridge.dev | password123 |
+
 ```
 skillbridge/
 ├── client/   React 19 + Vite + Tailwind v4 + React Router + Axios
