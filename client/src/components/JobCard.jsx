@@ -10,21 +10,21 @@ export default function JobCard({ job, userSkills = [] }) {
       to={`/jobs/${job._id}`}
       className="card-orchid block hover:border-[#7c5cff]/60 hover:bg-white/[0.06] transition-colors duration-150 group text-left"
     >
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex items-start gap-3.5">
+      <div className="flex items-start justify-between gap-3 min-w-0">
+        <div className="flex items-start gap-3.5 min-w-0">
           <div className="h-10 w-10 flex-shrink-0 rounded-xl bg-gradient-to-tr from-[#7c5cff] to-[#a78bfa] text-white font-bold flex items-center justify-center text-sm shadow-md">
             {companyInitial}
           </div>
-          <div>
-            <h3 className="font-medium text-base text-white group-hover:text-[#7c5cff] transition-colors duration-150 line-clamp-1">
+          <div className="min-w-0">
+            <h3 className="font-medium text-base text-white group-hover:text-[#7c5cff] transition-colors duration-150 truncate">
               {job.title}
             </h3>
-            <p className="text-xs text-[#c9c6e0] mt-0.5">
+            <p className="text-xs text-[#c9c6e0] mt-0.5 truncate">
               {job.company?.name || 'Company'} · {job.location || 'Anywhere'}
             </p>
           </div>
         </div>
-        <span className="badge-pill font-medium text-[#7c5cff] border-[#7c5cff]/30 bg-[#7c5cff]/10">
+        <span className="badge-pill font-medium text-[#7c5cff] border-[#7c5cff]/30 bg-[#7c5cff]/10 shrink-0">
           {formatINR(job.stipend)}{job.stipend ? '/mo' : ''}
         </span>
       </div>

@@ -41,21 +41,21 @@ export default function JobList() {
   return (
     <div className="py-6">
       <PageTitle title="Browse Jobs" subtitle={pagination ? `${pagination.total} openings available` : ''} />
-      <form onSubmit={submitSearch} className="card-orchid mb-8 grid gap-4 md:grid-cols-6">
+      <form onSubmit={submitSearch} className="card-orchid mb-8 grid gap-4 md:grid-cols-6 min-w-0">
         <input
-          className="input-orchid md:col-span-2"
+          className="input-orchid md:col-span-2 min-w-0"
           placeholder="Search title, skill, keyword…"
           value={draft.keyword}
           onChange={(e) => setDraft({ ...draft, keyword: e.target.value })}
         />
         <input
-          className="input-orchid"
+          className="input-orchid min-w-0"
           placeholder="Location"
           value={draft.location}
           onChange={(e) => setDraft({ ...draft, location: e.target.value })}
         />
         <input
-          className="input-orchid"
+          className="input-orchid min-w-0"
           type="number"
           min="0"
           placeholder="Min stipend ₹"
@@ -63,7 +63,7 @@ export default function JobList() {
           onChange={(e) => setDraft({ ...draft, minStipend: e.target.value })}
         />
         <select
-          className="input-orchid"
+          className="input-orchid min-w-0"
           value={filters.jobType}
           onChange={(e) => update({ jobType: e.target.value })}
         >
@@ -73,7 +73,7 @@ export default function JobList() {
           ))}
         </select>
         <select
-          className="input-orchid"
+          className="input-orchid min-w-0"
           value={filters.workMode}
           onChange={(e) => update({ workMode: e.target.value })}
         >
@@ -82,7 +82,7 @@ export default function JobList() {
             <option key={t} value={t} className="bg-[#12102b] text-white capitalize">{t}</option>
           ))}
         </select>
-        <div className="flex gap-3 md:col-span-6 pt-2">
+        <div className="flex flex-wrap gap-3 md:col-span-6 pt-2">
           <button className="btn-pill-primary">Search</button>
           <button type="button" onClick={clear} className="btn-pill-secondary">Clear</button>
         </div>

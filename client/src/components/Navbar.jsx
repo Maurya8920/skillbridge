@@ -50,11 +50,11 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full px-6 py-5 bg-[#0b0a1f]/80 backdrop-blur-md border-b border-white/10">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between">
+      <header className="sticky top-0 z-50 w-full max-w-full px-4 sm:px-6 py-4 sm:py-5 bg-[#0b0a1f]/80 backdrop-blur-md border-b border-white/10 overflow-hidden">
+        <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between min-w-0">
           {/* Logo Left */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#7c5cff] via-[#9d4edd] to-[#ff70a6] shadow-[0_0_20px_rgba(124,92,255,0.4)]">
+          <Link to="/" className="flex items-center gap-3 group shrink-0">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#7c5cff] via-[#9d4edd] to-[#ff70a6] shadow-[0_0_20px_rgba(124,92,255,0.4)] shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 3L19 12L5 21V3Z" fill="#ffffff" />
               </svg>
@@ -65,7 +65,7 @@ export default function Navbar() {
           </Link>
 
           {/* Centre Pill Container */}
-          <nav className="hidden lg:flex items-center gap-7 rounded-full border border-white/10 bg-white/[0.04] px-7 py-2.5 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-7 rounded-full border border-white/10 bg-white/[0.04] px-7 py-2.5 backdrop-blur-md max-w-full overflow-x-auto">
             {!user ? (
               /* Logged-out nav: marketing links only, NO app links */
               <>
@@ -163,7 +163,7 @@ export default function Navbar() {
 
         {/* Mobile Dropdown Panel */}
         {mobileMenuOpen && (
-          <div className="mt-4 rounded-2xl border border-white/10 bg-[#12102b] p-5 shadow-2xl lg:hidden space-y-4">
+          <div className="mt-4 rounded-2xl border border-white/10 bg-[#12102b] p-4 sm:p-5 shadow-2xl lg:hidden space-y-4 w-full max-w-full overflow-hidden">
             {!user ? (
               /* Logged-out mobile links */
               <div className="space-y-3">

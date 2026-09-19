@@ -2,29 +2,30 @@ import { Link } from 'react-router-dom';
 
 export default function ForStudents() {
   return (
-    <div className="py-16 text-center max-w-4xl mx-auto">
+    <div className="py-12 sm:py-16 text-center max-w-4xl mx-auto w-full overflow-hidden">
       {/* Badge */}
-      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs text-[#c9c6e0] mb-8">
-        <span className="h-2 w-2 rounded-full bg-[#7c5cff]" />
-        <span>For Early-Career Talent & Students</span>
+      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs text-[#c9c6e0] mb-8 max-w-full">
+        <span className="h-2 w-2 rounded-full bg-[#7c5cff] shrink-0" />
+        <span className="truncate">For Early-Career Talent & Students</span>
       </div>
 
       {/* Hero Headline */}
-      <h1 className="headline-hero mb-6">
-        Launch Your Tech Career<br />With Precision AI Matching
+      <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-white mb-6 leading-[1.15] break-words">
+        Launch Your Tech Career<br className="hidden sm:inline" />{' '}
+        With Precision AI Matching
       </h1>
 
       {/* Subtitle */}
-      <p className="mx-auto max-w-2xl text-lg text-[#c9c6e0] leading-relaxed mb-10">
+      <p className="mx-auto max-w-2xl text-base sm:text-lg text-[#c9c6e0] leading-relaxed mb-10 px-2">
         Skip the endless application black hole. SkillBridge connects your verified skills and coursework directly to high-growth internships and full-time opportunities.
       </p>
 
       {/* Actions */}
-      <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
-        <Link to="/register?role=student" className="btn-pill-primary">
+      <div className="flex flex-wrap items-center justify-center gap-4 mb-16 sm:mb-20 px-2">
+        <Link to="/register?role=student" className="btn-pill-primary w-full sm:w-auto text-center">
           Get Started as a Student
         </Link>
-        <Link to="/jobs" className="btn-pill-secondary">
+        <Link to="/jobs" className="btn-pill-secondary w-full sm:w-auto text-center">
           Browse Open Jobs
         </Link>
       </div>

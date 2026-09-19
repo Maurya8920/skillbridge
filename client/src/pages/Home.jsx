@@ -4,54 +4,54 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="pt-20 md:pt-28 pb-0 text-center flex flex-col items-center">
-        <div className="mx-auto max-w-[1440px] px-6">
-          {/* Centred Headline in 3 lines, 56px/1.15, weight 500 */}
-          <h1 className="headline-hero max-w-4xl mx-auto">
-            Find Internships and<br />
-            Jobs that Match<br />
+      <section className="pt-20 md:pt-28 pb-0 text-center flex flex-col items-center w-full max-w-full overflow-hidden">
+        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
+          {/* Centred Headline in 3 lines, text-4xl on mobile, text-6xl on md+ */}
+          <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-white max-w-4xl mx-auto leading-[1.15] break-words">
+            Find Internships and<br className="hidden sm:inline" />{' '}
+            Jobs that Match<br className="hidden sm:inline" />{' '}
             Your Skills
           </h1>
 
           {/* Sub-paragraph 18px, #c9c6e0, max-width 760px */}
-          <p className="mt-6 mx-auto max-w-[760px] text-lg leading-relaxed text-[#c9c6e0]">
+          <p className="mt-6 mx-auto max-w-[760px] text-base sm:text-lg leading-relaxed text-[#c9c6e0] px-2">
             SkillBridge connects students and top recruiters with autonomous AI skill matching,
             instant tailored cover letters, and intelligent candidate ranking. Find your next breakthrough role in seconds.
           </p>
 
           {/* Two Buttons: "Get Started" (purple) and "Browse Jobs" (white) */}
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-            <Link to="/register" className="btn-pill-primary">
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4 w-full px-2">
+            <Link to="/register" className="btn-pill-primary w-full sm:w-auto text-center">
               Get Started
             </Link>
-            <Link to="/jobs" className="btn-pill-secondary">
+            <Link to="/jobs" className="btn-pill-secondary w-full sm:w-auto text-center">
               Browse Jobs
             </Link>
           </div>
 
           {/* Dashboard Preview Card cut off at the bottom like the reference */}
-          <div className="mt-16 md:mt-20 mx-auto max-w-5xl overflow-hidden rounded-t-[24px] border-t border-x border-white/15 bg-[#12102b] shadow-[0_-15px_60px_rgba(0,0,0,0.8),0_0_50px_rgba(124,92,255,0.15)] text-left">
+          <div className="mt-16 md:mt-20 mx-auto w-full max-w-5xl overflow-hidden rounded-t-[24px] border-t border-x border-white/15 bg-[#12102b] shadow-[0_-15px_60px_rgba(0,0,0,0.8),0_0_50px_rgba(124,92,255,0.15)] text-left min-w-0">
             {/* Window title bar */}
-            <div className="flex h-11 items-center justify-between border-b border-white/10 bg-[#0d0b24] px-5 text-xs text-[#c9c6e0]">
-              <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-rose-500/80 inline-block" />
-                <span className="h-3 w-3 rounded-full bg-amber-500/80 inline-block" />
-                <span className="h-3 w-3 rounded-full bg-emerald-500/80 inline-block" />
-                <span className="ml-3 font-semibold text-white/90">SkillBridge Dashboard</span>
-                <span className="text-white/40 hidden sm:inline">(Updated 2 hours ago)</span>
+            <div className="flex h-11 items-center justify-between border-b border-white/10 bg-[#0d0b24] px-4 sm:px-5 text-xs text-[#c9c6e0] min-w-0">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="h-3 w-3 rounded-full bg-rose-500/80 inline-block shrink-0" />
+                <span className="h-3 w-3 rounded-full bg-amber-500/80 inline-block shrink-0" />
+                <span className="h-3 w-3 rounded-full bg-emerald-500/80 inline-block shrink-0" />
+                <span className="ml-2 sm:ml-3 font-semibold text-white/90 truncate">SkillBridge Dashboard</span>
+                <span className="text-white/40 hidden sm:inline shrink-0">(Updated 2 hours ago)</span>
               </div>
-              <span className="badge-pill py-0.5 text-[11px]">✨ AI Powered</span>
+              <span className="badge-pill py-0.5 text-[11px] shrink-0 ml-2">✨ AI</span>
             </div>
 
             {/* Dashboard Inner Body */}
-            <div className="p-6 md:p-8 space-y-6">
-              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="p-4 sm:p-6 md:p-8 space-y-6 w-full max-w-full overflow-hidden min-w-0">
+              <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 min-w-0">
                 {/* Metric 1: Total Jobs */}
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5 min-w-0">
                   <div className="text-xs uppercase font-medium text-[#c9c6e0]/70 tracking-wider">
                     Total Active Roles
                   </div>
-                  <div className="mt-2 text-3xl font-semibold text-white">
+                  <div className="mt-2 text-2xl sm:text-3xl font-semibold text-white">
                     1,240
                   </div>
                   <div className="mt-3 flex items-center gap-2 text-xs text-emerald-400">
@@ -61,11 +61,11 @@ export default function Home() {
                 </div>
 
                 {/* Metric 2: Match Score Average */}
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5 min-w-0">
                   <div className="text-xs uppercase font-medium text-[#c9c6e0]/70 tracking-wider">
                     Avg Match Precision
                   </div>
-                  <div className="mt-2 text-3xl font-semibold text-[#7c5cff]">
+                  <div className="mt-2 text-2xl sm:text-3xl font-semibold text-[#7c5cff]">
                     94.8%
                   </div>
                   <div className="mt-3 flex items-center gap-2 text-xs text-[#c9c6e0]/80">
@@ -74,11 +74,11 @@ export default function Home() {
                 </div>
 
                 {/* Metric 3: Application Ratio */}
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5 min-w-0">
                   <div className="text-xs uppercase font-medium text-[#c9c6e0]/70 tracking-wider">
                     Shortlist Rate
                   </div>
-                  <div className="mt-2 text-3xl font-semibold text-white">
+                  <div className="mt-2 text-2xl sm:text-3xl font-semibold text-white">
                     40%
                   </div>
                   <div className="mt-3 text-xs text-[#c9c6e0]/60">
@@ -87,11 +87,11 @@ export default function Home() {
                 </div>
 
                 {/* Metric 4: AI Generations */}
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5 min-w-0">
                   <div className="text-xs uppercase font-medium text-[#c9c6e0]/70 tracking-wider">
                     AI Cover Letters
                   </div>
-                  <div className="mt-2 text-3xl font-semibold text-white">
+                  <div className="mt-2 text-2xl sm:text-3xl font-semibold text-white">
                     12.4k
                   </div>
                   <div className="mt-3 text-xs text-amber-400">
@@ -101,9 +101,9 @@ export default function Home() {
               </div>
 
               {/* Bottom Row: Applications Breakdown & SVG Multi-line Chart */}
-              <div className="grid gap-5 lg:grid-cols-12">
+              <div className="grid gap-5 grid-cols-1 lg:grid-cols-12 min-w-0">
                 {/* Applications status breakdown */}
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5 lg:col-span-5 space-y-3.5">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5 lg:col-span-5 space-y-3.5 min-w-0">
                   <div className="text-sm font-semibold text-white">
                     Application Pipeline
                   </div>
@@ -149,15 +149,15 @@ export default function Home() {
                 </div>
 
                 {/* Multi-line curved SVG chart (matching the reference image) */}
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5 lg:col-span-7">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5 lg:col-span-7 min-w-0 overflow-hidden">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-sm font-semibold text-white">Placement Velocity Trends</span>
                     <span className="text-xs text-[#c9c6e0]/60">Last 6 months</span>
                   </div>
 
                   {/* SVG Multi-curve line chart */}
-                  <div className="h-44 w-full">
-                    <svg viewBox="0 0 500 180" className="w-full h-full overflow-visible" preserveAspectRatio="none">
+                  <div className="h-44 w-full overflow-hidden">
+                    <svg viewBox="0 0 500 180" className="w-full h-full overflow-hidden" preserveAspectRatio="none">
                       {/* Grid lines */}
                       <line x1="0" y1="30" x2="500" y2="30" stroke="rgba(255,255,255,0.06)" strokeDasharray="4 4" />
                       <line x1="0" y1="80" x2="500" y2="80" stroke="rgba(255,255,255,0.06)" strokeDasharray="4 4" />
@@ -193,7 +193,7 @@ export default function Home() {
                   </div>
 
                   {/* Legend */}
-                  <div className="flex items-center justify-center gap-6 mt-2 text-xs text-[#c9c6e0]">
+                  <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mt-2 text-xs text-[#c9c6e0]">
                     <span className="flex items-center gap-1.5">
                       <span className="h-2 w-2 rounded-full bg-[#7c5cff]" />
                       <span>Shortlisted</span>
